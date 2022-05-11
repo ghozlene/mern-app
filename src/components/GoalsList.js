@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './GoalsList.css';
 const GoalsList = () => {
 	return (
 		<ul className='goal-list'>
