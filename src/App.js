@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import GoalsList from './components/GoalsList';
 import NewGoal from './components/newGoals/NewGoal';
 function App() {
-	const courseGoals = [
+	const [courseGoals, setCourseGoals] = useState([
 		{
 			id: '1',
 			text: 'finish the course',
@@ -16,11 +16,10 @@ function App() {
 			id: '3',
 			text: 'this the last course',
 		},
-	];
+	]);
 
 	const addNewGoalHandler = (newGoal) => {
-		courseGoals.push(newGoal);
-		console.log(courseGoals);
+		setCourseGoals(courseGoals.concat(newGoal));
 	};
 	return (
 		<div className='course-goals'>
