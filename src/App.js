@@ -2,10 +2,25 @@ import React from 'react';
 import './App.css';
 import GoalsList from './components/GoalsList';
 function App() {
+	const courseGoals = [
+		{
+			id: '1',
+			text: 'finish the course',
+		},
+		{
+			id: '2',
+			text: 'learning more',
+		},
+		{
+			id: '3',
+			text: 'this the last course',
+		},
+	];
+
 	return (
 		<div className='course-goals'>
 			<h2>Course Goals</h2>
-			<GoalsList />
+			<GoalsList goals={courseGoals} />
 		</div>
 	);
 }
